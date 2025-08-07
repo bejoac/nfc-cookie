@@ -14,4 +14,8 @@ jobs:
         node-version: '18'
         cache: 'npm'
     - run: npm ci
+    - name: Configure git
+      run: |
+        git config --global user.email "betejoachim@gmail.com"
+        git config --global user.name "bejoac"
     - run: npm run deploy
