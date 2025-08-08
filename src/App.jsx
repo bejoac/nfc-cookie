@@ -1,8 +1,15 @@
+import { createClient } from 'npm:@supabase/supabase-js@2'
+
+
 import "./App.css";
 
 function App() {
-  const apiKey = import.meta.env.VITE_API_KEY;
-  console.log(apiKey);
+  const supabaseClient = createClient(
+    import.meta.env.VITE_SUPABASE_URL,
+    import.meta.env.VITE_SUPABASE_ANON_KEY
+  );
+
+  console.log(supabaseClient);
 
   return (
     <>
