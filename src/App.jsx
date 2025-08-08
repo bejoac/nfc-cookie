@@ -31,11 +31,9 @@ function App() {
   }, []);
 
   return (
-    <>
-      <h2 className="heading">
-        {text && text.length > 0 ? text[0]["text"] : <LoadingComponent />}
-      </h2>
-    </>
+    <div className="saying-container">
+        {text && text.length > 0 ? <h2>{text[0]["text"]}</h2> : <LoadingComponent />}
+    </div>
   );
 }
 
