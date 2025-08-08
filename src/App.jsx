@@ -1,6 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 import { useEffect, useState } from "react";
-
+import LoadingComponent from "./LoadingComponent";
 import "./App.css";
 
 const supabase = createClient(
@@ -23,7 +23,7 @@ function App() {
       } else {
         setTimeout(() => {
           setText(data);
-        }, 600);
+        }, 2450);
       }
     }
 
@@ -33,7 +33,7 @@ function App() {
   return (
     <>
       <h2 className="heading">
-        {text && text.length > 0 ? text[0]["text"] : "Checking the future 🔮"}
+        {text && text.length > 0 ? text[0]["text"] : <LoadingComponent />}
       </h2>
     </>
   );
