@@ -1,17 +1,42 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient } from "@supabase/supabase-js";
+import { useEffect, useState } from "react";
+
 import "./App.css";
 
-function App() {
-  const supabaseClient = createClient(
-    import.meta.env.VITE_SUPABASE_URL,
-    import.meta.env.VITE_SUPABASE_ANON_KEY
-  );
+const supabase = createClient(
+  import.meta.env.VITE_SUPABASE_URL,
+  import.meta.env.VITE_SUPABASE_ANON_KEY
+);
 
-  console.log(supabaseClient);
+function App() {
+  const [text, setText] = useState("");
+
+  useEffect(() => {
+    async function fetchData() {
+      const { data, error } = await supabase
+        .from("random_sayings")
+        .select("text")
+        .limit(1);
+
+      if (error) {
+        console.error("Error fetching data:", error);
+      } else {
+        setText(data);
+      }
+    }
+
+    fetchData();
+  }, []);
+
+  if (text) {
+    console.log(text[0]["text"]);
+  }
 
   return (
     <>
-      <h2 className="heading">"Vertraue auf deine Intuition; sie wird dich führen."</h2>
+      <h2 className="heading">
+        {text && text.length > 0 ? text[0]["text"] : "Loading..."}
+      </h2>
     </>
   );
 }
