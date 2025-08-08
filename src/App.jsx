@@ -23,7 +23,7 @@ function App() {
       } else {
         setTimeout(() => {
           setText(data);
-        }, 2450);
+        }, 2250);
       }
     }
 

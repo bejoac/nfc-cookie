@@ -5,7 +5,7 @@ function LoadingComponent() {
       <img
         src={jumpGif}
         alt="Loading..."
-        style={{ width: "5rem", height: "5rem" }}
+        style={{ width: "8rem", height: "8rem" }}
       />
   );
 }
