@@ -35,7 +35,7 @@ function App() {
   return (
     <>
       <h2 className="heading">
-        {text && text.length > 0 ? text[0]["text"] : "Loading..."}
+        {text && text.length > 0 ? text[0]["text"] : "Checking the future 🔮..."}
       </h2>
     </>
   );
