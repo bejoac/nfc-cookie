@@ -1,4 +1,4 @@
-import jumpGif from "./assets/jump-hello-transparent.gif";
+import jumpGif from "./assets/im-free-cute.gif";
 
 function LoadingComponent() {
   return (
