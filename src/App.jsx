@@ -21,7 +21,9 @@ function App() {
       if (error) {
         console.error("Error fetching data:", error);
       } else {
-        setText(data);
+        setTimeout(() => {
+          setText(data);
+        }, 600);
       }
     }
 
@@ -31,9 +33,7 @@ function App() {
   return (
     <>
       <h2 className="heading">
-        {text && text.length > 0
-          ? text[0]["text"]
-          : "Checking the future 🔮"}
+        {text && text.length > 0 ? text[0]["text"] : "Checking the future 🔮"}
       </h2>
     </>
   );
