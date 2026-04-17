@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient } from 'https://esm.sh/@supabase/supabase-js';
 
 const apiKey = "sb_publishable_bXebsEh1ej_K2vyh73HU1w_SApkXdVi";
 const url = "https://bovhjfcmyuqdunylkzdq.supabase.co";
