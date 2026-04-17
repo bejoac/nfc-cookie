@@ -7,5 +7,5 @@ const url = "https://bovhjfcmyuqdunylkzdq.supabase.co";
 const supabase = createClient(url, apiKey);
 
 if (supabase) {
-  console.log("Sucess!");
+  console.log("Success!");
 };
