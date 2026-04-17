@@ -8,4 +8,6 @@ const supabase = createClient(url, apiKey);
 
 if (supabase) {
   console.log("Success!");
+} else {
+  console.log("Unsuccess!");
 };
