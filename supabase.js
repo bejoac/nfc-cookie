@@ -2,8 +2,6 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js';
 
 const apiKey = "sb_publishable_bXebsEh1ej_K2vyh73HU1w_SApkXdVi";
 const url = "https://bovhjfcmyuqdunylkzdq.supabase.co";
-
-// Create a single supabase client for interacting with your database
 const supabase = createClient(url, apiKey);
 
 try {
@@ -19,10 +17,3 @@ try {
   console.log("Browser API-Call Error: ", error)
 };
 
-
-
-
-// How do I make sure the program stops after Error?
-
-// Do I need try catch?
-// What is error in this case? Just that the task in the background could not be finished?
