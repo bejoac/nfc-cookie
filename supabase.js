@@ -9,7 +9,7 @@ const supabase = createClient(url, apiKey);
 const { data, error } = await supabase.rpc('get_random_item');
 
 if (data) {
-  console.log(data);
+  console.log(data.saying);
 } else {
   console.log("Error: ", error);
 };
