@@ -15,3 +15,4 @@ if (data) {
 };
 
 // Do I need try catch?
+// What is error in this case? Just that the task in the background could not be finished?
