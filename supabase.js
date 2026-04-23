@@ -19,4 +19,4 @@ async function loadData() {
   };
 };
 
-loadData();
+setTimeout(loadData, 1000);
