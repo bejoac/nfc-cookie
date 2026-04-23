@@ -6,10 +6,12 @@ const url = "https://bovhjfcmyuqdunylkzdq.supabase.co";
 // Create a single supabase client for interacting with your database
 const supabase = createClient(url, apiKey);
 
-const { data, error} = await supabase.from("fortune-cookie-sayings").select('*');
+const { data, error } = await supabase.rpc('get_random_item');
 
-if (error) {
-  console.log("Error: ", error);
+if (data) {
+  console.log(data);
 } else {
-  console.log("Sucess: ", data);
+  console.log("Error: ", error);
 };
+
+// Do I need try catch?
