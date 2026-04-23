@@ -6,13 +6,23 @@ const url = "https://bovhjfcmyuqdunylkzdq.supabase.co";
 // Create a single supabase client for interacting with your database
 const supabase = createClient(url, apiKey);
 
-const { data, error } = await supabase.rpc('get_random_item');
+try {
+  const { data, error } = await supabase.rpc('get_random_item');
 
-if (data) {
-  console.log(data.saying);
-} else {
-  console.log("Error: ", error);
+  if (error) {
+    console.log("Supabase Error: ", error);
+    return;
+  };
+
+  document.getElementById("main-container").innerHTML = data.saying;
+} catch (error) {
+  console.log("Browser API-Call Error: ", error)
 };
+
+
+
+
+// How do I make sure the program stops after Error?
 
 // Do I need try catch?
 // What is error in this case? Just that the task in the background could not be finished?
