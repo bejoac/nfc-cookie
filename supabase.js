@@ -7,14 +7,13 @@ const supabase = createClient(url, apiKey);
 try {
   const { data, error } = await supabase.rpc('get_random_item');
 
-  if (true) {
+  if (error) {
     throw new Error("Supabase Error");
   };
 
-  console.log("Pls github just deploy already");
-
   document.getElementById("main-container").innerHTML = data.saying;
+
 } catch (error) {
-  console.log("Browser API-Call Error: ", error)
+  console.log(error)
 };
 
