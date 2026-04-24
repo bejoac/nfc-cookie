@@ -12,7 +12,7 @@ try {
   if (error) {
     throw new Error("Supabase Error");
   };
-  console.log("Test");
+  console.log("Test Pls");
 
   document.getElementById("main-container").innerHTML = data.saying;
 } catch (error) {
