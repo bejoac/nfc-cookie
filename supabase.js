@@ -9,7 +9,7 @@ try {
 
   const error = true;
 
-  if (error) {
+  if (true) {
     throw new Error("Supabase Error");
   };
   console.log("Test Pls");
