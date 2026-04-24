@@ -7,8 +7,6 @@ const supabase = createClient(url, apiKey);
 try {
   const { data, error } = await supabase.rpc('get_random_item');
 
-  const error = true;
-
   if (true) {
     throw new Error("Supabase Error");
   };
